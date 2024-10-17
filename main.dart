@@ -1,19 +1,14 @@
-import 'pessoa.dart';
-import 'pai.dart';
+import 'cliente.dart';
+import 'conta.dart';
 
 void main(){
-  Pai p1 = Pai("José", 42, "Professor");
-  p1.apresentar();
-}
+  Cliente c1 = Cliente ("Dayane", 1);
+  c1.mostrarDados();
 
-class Formas{
-  String tipo = "qualquer forma";
+   Conta conta1 = Conta("Banco XYZ", "Corrente", 12345, "Dayane", 1000.0);
 
-  void exibir(){
-    print("Imprimindo o tipo de forma: ${this.tipo}");
-  }
-}
+  conta1.deposita(250.0);
+  conta1.saca(100.0);
 
-class Triangulo extends Formas{
-  
+  conta1.imprimeExtrato();
 }
